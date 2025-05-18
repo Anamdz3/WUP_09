@@ -102,7 +102,22 @@ subsets(regsubsets.out,statistic="adjr2", legend = "bottom", main ="adjr2")
 
 ### Best Models
 
+The best model is model5, corresponding to L1-L2-L3-H-W.
+
 ### Best Two regressor model
+
+The best two regressor model is model2; L1-L3.
+
+The best model is different to the best two regressor model so we will run ANOVA.
+
+```{r}
+model5=lm(Weight~ . ,data=Pike)
+summary.lm(model5)
+model2=lm(Weight~ . -Length2-Height-Width , data=Pike)
+model3=lm(Weight~ . -Length2-Height , data=Pike)
+anova(model5,model2)
+```
+
 
 ## Roach
 
