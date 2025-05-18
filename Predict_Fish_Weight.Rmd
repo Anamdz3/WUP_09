@@ -143,6 +143,10 @@ subsets(regsubsets.out,statistic="adjr2", legend = "bottomleft", main ="adjr2")
 
 ### Best Models
 
+Seems like the best model is model 2, where we can find L3 and W.
+
 ### Best Two regressor model
 
 ## Final Summary Statements
+
+
