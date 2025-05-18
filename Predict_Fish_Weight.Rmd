@@ -65,7 +65,16 @@ summary.out <- summary(regsubsets.out)
 as.data.frame(summary.out$outmat)
 ```
 
+```{r}
+library(car)
+subsets(regsubsets.out, statistic="adjr2", legend = "bottom", main ="adjr2")
+```
+
+
 ### Best Models
+
+
+
 
 ### Best Two regressor model
 
