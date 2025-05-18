@@ -81,6 +81,25 @@ The best two regressive model is also the model H & W.
 
 ## Pike
 
+```{r}
+library(leaps)
+regsubsets.out <-
+  regsubsets(Weight ~ .,
+                           data = Pike,
+                           nbest = 1,
+                           nvmax = NULL,
+                           force.in = NULL, force.out = NULL,
+                           method = "exhaustive")
+
+summary.out <- summary(regsubsets.out)
+as.data.frame(summary.out$outmat)
+```
+```{r}
+library(car)
+subsets(regsubsets.out,statistic="adjr2", legend = "bottom", main ="adjr2")
+```
+
+
 ### Best Models
 
 ### Best Two regressor model
