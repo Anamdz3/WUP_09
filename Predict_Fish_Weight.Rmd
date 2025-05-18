@@ -51,6 +51,20 @@ Whitefish <- select(Whitefish, -Species)
 
 ## Perch
 
+```{r}
+library(leaps)
+regsubsets.out <-
+  regsubsets(Weight ~ .,
+                           data = Perch,
+                           nbest = 1,
+                           nvmax = NULL,
+                           force.in = NULL, force.out = NULL,
+                           method = "exhaustive")
+
+summary.out <- summary(regsubsets.out)
+as.data.frame(summary.out$outmat)
+```
+
 ### Best Models
 
 ### Best Two regressor model
