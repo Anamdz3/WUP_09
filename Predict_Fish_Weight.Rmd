@@ -73,11 +73,11 @@ subsets(regsubsets.out, statistic="adjr2", legend = "bottom", main ="adjr2")
 
 ### Best Models
 
-
+The best model is the two element model; H & W models.
 
 
 ### Best Two regressor model
-
+The best two regressive model is also the model H & W.
 
 ## Pike
 
